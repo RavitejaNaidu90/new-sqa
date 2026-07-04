@@ -27,6 +27,12 @@ import { DefectsMasterComponent } from './defects-master/defects-master.componen
 import { PartsFamilyPopComponent } from './defects-master/parts-family-pop/parts-family-pop.component';
 import { AddDefectsPopComponent } from './defects-master/add-defects-pop/add-defects-pop.component';
 import { VenderRatingComponent } from './vender-rating/vender-rating.component';
+import { SupplierMasterComponent } from './supplier-master/supplier-master.component';
+import { StateMasterComponent } from './state-master/state-master.component';
+import { CityMasterComponent } from './city-master/city-master.component';
+import { AddSupplierComponent } from './supplier-master/add-supplier/add-supplier.component';
+import { AddCityComponent } from './city-master/add-city/add-city.component';
+import { AddStateComponent } from './state-master/add-state/add-state.component';
 
 // ❌ REMOVED AuditCategoriesComponent, AddPartCategoryComponent, and PartsauditcatInnergridComponent imports from here
 
@@ -35,21 +41,24 @@ const routes: Routes = [
     path: '',
     component: PartsSetupComponent,
     children: [
-      { 
-        path: 'parts-cat', 
-        loadChildren: () => import('./audit-categories/audit-categories.module').then(m => m.AuditCategoriesModule) 
+      {
+        path: 'parts-cat',
+        loadChildren: () => import('./audit-categories/audit-categories.module').then(m => m.AuditCategoriesModule)
       },
-      { 
-        path: 'families', 
+      {
+        path: 'families',
         children: [
           { path: '', component: PartsFamiliesComponent }, // Default view when hitting /families
           { path: 'families-inner-grid', component: FamiliesInnerGridComponent } // Child view
         ]
       },
       { path: 'master', component: PartsMasterComponent },
-         { path: 'batchmaster', component: BatchMasterComponent },
-           { path: 'defectsmaster', component: DefectsMasterComponent },
-           { path: 'vender-rating', component: VenderRatingComponent },
+      { path: 'batchmaster', component: BatchMasterComponent },
+      { path: 'defectsmaster', component: DefectsMasterComponent },
+      { path: 'vender-rating', component: VenderRatingComponent },
+      { path: 'supplier-master', component: SupplierMasterComponent },
+      { path: 'city-master', component: CityMasterComponent },
+      { path: 'state-master', component: StateMasterComponent },
       { path: '', redirectTo: 'parts-cat', pathMatch: 'full' }
     ]
   }
@@ -69,8 +78,14 @@ const routes: Routes = [
     DefectsMasterComponent,
     PartsFamilyPopComponent,
     AddDefectsPopComponent,
-    VenderRatingComponent
- 
+    VenderRatingComponent,
+    SupplierMasterComponent,
+    StateMasterComponent,
+    CityMasterComponent,
+    AddSupplierComponent,
+    AddCityComponent,
+    AddStateComponent
+
   ],
   imports: [
     CommonModule,
@@ -85,7 +100,7 @@ const routes: Routes = [
     MatIconModule,
     MatDialogModule,
     SharedModule,
- 
+
   ]
 })
 export class PartsSetupModule { }

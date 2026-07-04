@@ -6,7 +6,7 @@
   ">
     <div class="NewHeader">
         <h1 style="color: white; margin-top:5px" mat-dialog-title>
-            {{ data ? "Update" : "Add" }} Department 
+            {{ data ? "Update" : "Add" }} Department
         </h1>
     </div>
     <div mat-dialog-content>
@@ -16,7 +16,7 @@
                 <label class="control-label col-sm-4 "> Department:
                 </label>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                  <input type="text" class="form-control" placeholder="Enter Department" />
+                    <input type="text" class="form-control" placeholder="Enter Department" />
                 </div>
             </div>
             <!-- Role -->
@@ -25,6 +25,13 @@
                 </label>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
                     <input type="text" class="form-control" placeholder="Enter Department Code" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 20px">
+                <label class="control-label col-sm-4 ">Department Head:
+                </label>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                    <input type="text" class="form-control" placeholder="Enter Department Head" />
                 </div>
             </div>
 
@@ -37,9 +44,10 @@
                 <mat-icon>cancel</mat-icon>Close
             </button>
             <button mat-raised-button color="primary" [mat-dialog-close]="'test'">
-                <mat-icon  style="font-size:20px" class="mt-1">save</mat-icon> <span style="margin-left: 5px;">{{ data ? "Update" : "Save" }}</span>
+                <mat-icon style="font-size:20px" class="mt-1">save</mat-icon> <span style="margin-left: 5px;">{{ data ?
+                    "Update" : "Save" }}</span>
             </button>
-            
+
         </div>
     </mat-dialog-actions>
 </div>

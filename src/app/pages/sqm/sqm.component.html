@@ -204,6 +204,23 @@
             <span *ngIf="isSidenavOpen">Vendor Rating</span>
           </a>
         </li>
+        <li routerLinkActive="active" routerLink="./parts/setup/supplier-master">
+          <a>
+            <mat-icon class="nav-icon" *ngIf="!isSidenavOpen" matTooltip="Supplier Master">business</mat-icon>
+            <span *ngIf="isSidenavOpen">Supplier Master</span>
+          </a>
+        </li>
+        <li routerLinkActive="active" routerLink="./parts/setup/city-master">
+          <a>
+            <mat-icon class="nav-icon" *ngIf="!isSidenavOpen" matTooltip="City Master">location_city</mat-icon>
+            <span *ngIf="isSidenavOpen">City Master</span>
+          </a>
+        </li>
+        <li routerLinkActive="active" routerLink="./parts/setup/state-master">
+          <a>
+            <mat-icon class="nav-icon" *ngIf="!isSidenavOpen" matTooltip="State Master">map</mat-icon>
+            <span *ngIf="isSidenavOpen">State Master</span>
+          </a>
       </ul>
     </nav>
 

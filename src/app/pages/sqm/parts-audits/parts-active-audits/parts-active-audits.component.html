@@ -13,6 +13,9 @@
   </div>
 
   <div class="toolbar-row">
+    <mat-checkbox style="margin-right: 16px;     margin-top: 6px;">
+      Mask Done
+    </mat-checkbox>
     <button mat-raised-button class="btn-dark" (click)="openGridView(null)">
       <mat-icon>grid_on</mat-icon> Grid View
     </button>
@@ -54,15 +57,14 @@
           <td>{{ audit.auditor }}</td>
           <td>{{ audit.date }}</td>
           <td class="text-link text-center">{{ audit.action }}</td>
-         <td class="text-link text-center">
-  <a href="assets/processaudit.pdf" target="_blank" title="View Audit Report">
-    {{ audit.score }}
-  </a>
-</td>
+          <td class="text-link text-center">
+            <a href="assets/processaudit.pdf" target="_blank" title="View Audit Report">
+              {{ audit.score }}
+            </a>
+          </td>
 
           <td class="text-center status-cell">
-            <mat-select class="mat-select form-control" style="width:120px"
-               placeholder="Select Status">
+            <mat-select class="mat-select form-control" style="width:120px" placeholder="Select Status">
               <mat-option value="Completed">Completed</mat-option>
               <mat-option value="Pending">Pending</mat-option>
               <mat-option value="InProgress">In Progress</mat-option>
@@ -83,8 +85,7 @@
       </tbody>
     </table>
 
-    <mat-paginator [length]="auditData.length" [pageSize]="4" [pageSizeOptions]="[4, 10, 20]"
-      aria-label="Select page">
+    <mat-paginator [length]="auditData.length" [pageSize]="4" [pageSizeOptions]="[4, 10, 20]" aria-label="Select page">
     </mat-paginator>
   </div>
 

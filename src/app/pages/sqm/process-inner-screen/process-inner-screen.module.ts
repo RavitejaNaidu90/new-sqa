@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 // --- ADDED FORMS MODULES (Required for formControlName and ngModel) ---
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // --- ANGULAR MATERIAL IMPORTS ---
 import { MatCardModule } from '@angular/material/card';
@@ -15,25 +15,26 @@ import { MatButtonModule } from '@angular/material/button';   // <-- FIXES THE B
 import { MatTooltipModule } from '@angular/material/tooltip'; // <-- FIXES TOOLTIPS ON ICONS
 
 // Import your components
- 
- 
+
+
 import { ProcessAuditDetailsComponent } from './process-audit-details/process-audit-details.component';
- 
+
 import { ProcessInnerScreenComponent } from './process-inner-screen.component';
 import { ProcessAuditReferenceComponent } from './process-audit-reference/process-audit-reference.component';
 import { ProcessCompletedReferenceComponent } from './process-completed-reference/process-completed-reference.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProcessInnerScreenComponent, 
+    component: ProcessInnerScreenComponent,
     children: [
-       
+
       { path: 'process-audit-details', component: ProcessAuditDetailsComponent },
       { path: 'process-audit-reference', component: ProcessAuditReferenceComponent },
-       { path: 'process-completed-reference', component: ProcessCompletedReferenceComponent },
- 
-      
+      { path: 'process-completed-reference', component: ProcessCompletedReferenceComponent },
+
+
       { path: '', redirectTo: 'process-audit-details', pathMatch: 'full' }
     ]
   }
@@ -43,7 +44,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    
+
     // --- ADD THE MISSING MODULES HERE ---
     FormsModule,
     ReactiveFormsModule,
@@ -52,8 +53,9 @@ const routes: Routes = [
     MatIconModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatButtonModule,  
-    MatTooltipModule  
+    MatButtonModule,
+    MatTooltipModule,
+    MatRadioModule
   ],
   exports: [RouterModule],
   declarations: [

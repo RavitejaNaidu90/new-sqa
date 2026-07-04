@@ -14,6 +14,7 @@ export class ProcessAuditReferenceComponent implements OnInit {
 
 
 
+
   // Dictionary mapping each category to its specific set of 12 questions
   categoryQuestionsMap: { [key: string]: any[] } = {
     'QMS(12)': [
@@ -124,7 +125,7 @@ export class ProcessAuditReferenceComponent implements OnInit {
         tooltip: 'MM',
         question: 'Are sub-suppliers required to comply with applicable customer, regulatory, and automotive quality requirements?'
       },
-     
+
     ],
     'PPC(18)': [
       {

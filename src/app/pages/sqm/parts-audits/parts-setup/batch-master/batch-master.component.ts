@@ -11,11 +11,11 @@ export class BatchMasterComponent implements OnInit {
 
   mockdata: any[] = [];
 
-  showFilters: boolean = false; 
+  showFilters: boolean = false;
 
 
 
-    toggleFilters(): void {
+  toggleFilters(): void {
     this.showFilters = !this.showFilters;
   }
 
@@ -27,14 +27,62 @@ export class BatchMasterComponent implements OnInit {
 
   generateMockData() {
     this.mockdata = [
-      { PartFamily: 'Engine Components', PartNumber: 'ENG-PN-001', BatchNumber: 'BCH-2026-001', BatchDate: '01/06/2026' },
-      { PartFamily: 'Transmission',      PartNumber: 'TRN-PN-014', BatchNumber: 'BCH-2026-002', BatchDate: '03/06/2026' },
-      { PartFamily: 'Electrical',        PartNumber: 'ELE-PN-022', BatchNumber: 'BCH-2026-003', BatchDate: '05/06/2026' },
-      { PartFamily: 'Body Panels',       PartNumber: 'BDP-PN-009', BatchNumber: 'BCH-2026-004', BatchDate: '08/06/2026' },
-      { PartFamily: 'Interior',          PartNumber: 'INT-PN-031', BatchNumber: 'BCH-2026-005', BatchDate: '10/06/2026' },
-      { PartFamily: 'Chassis',           PartNumber: 'CHS-PN-007', BatchNumber: 'BCH-2026-006', BatchDate: '12/06/2026' },
-      { PartFamily: 'Braking System',    PartNumber: 'BRK-PN-018', BatchNumber: 'BCH-2026-007', BatchDate: '14/06/2026' },
-      { PartFamily: 'Engine Components', PartNumber: 'ENG-PN-002', BatchNumber: 'BCH-2026-008', BatchDate: '16/06/2026' }
+      {
+        PartFamily: 'Engine Components',
+        PartNumber: 'ENG-PN-001',
+        BatchNumber: 'BCH-2026-001',
+        BatchDate: '01/06/2026',
+        Remarks: 'Engine components passed quality inspection successfully.'
+      },
+      {
+        PartFamily: 'Transmission',
+        PartNumber: 'TRN-PN-014',
+        BatchNumber: 'BCH-2026-002',
+        BatchDate: '03/06/2026',
+        Remarks: 'Minor wear detected during testing. Requires review.'
+      },
+      {
+        PartFamily: 'Electrical',
+        PartNumber: 'ELE-PN-022',
+        BatchNumber: 'BCH-2026-003',
+        BatchDate: '05/06/2026',
+        Remarks: 'Electrical connectors verified and approved.'
+      },
+      {
+        PartFamily: 'Body Panels',
+        PartNumber: 'BDP-PN-009',
+        BatchNumber: 'BCH-2026-004',
+        BatchDate: '08/06/2026',
+        Remarks: 'Paint finish meets required standards.'
+      },
+      {
+        PartFamily: 'Interior',
+        PartNumber: 'INT-PN-031',
+        BatchNumber: 'BCH-2026-005',
+        BatchDate: '10/06/2026',
+        Remarks: 'Interior trim installation completed successfully.'
+      },
+      {
+        PartFamily: 'Chassis',
+        PartNumber: 'CHS-PN-007',
+        BatchNumber: 'BCH-2026-006',
+        BatchDate: '12/06/2026',
+        Remarks: 'Chassis alignment verified within tolerance.'
+      },
+      {
+        PartFamily: 'Braking System',
+        PartNumber: 'BRK-PN-018',
+        BatchNumber: 'BCH-2026-007',
+        BatchDate: '14/06/2026',
+        Remarks: 'Brake performance test completed successfully.'
+      },
+      {
+        PartFamily: 'Engine Components',
+        PartNumber: 'ENG-PN-002',
+        BatchNumber: 'BCH-2026-008',
+        BatchDate: '16/06/2026',
+        Remarks: 'Pending final approval from quality assurance.'
+      }
     ];
   }
 
